@@ -1,0 +1,5 @@
+Here you'l find requirements about the project 
+and input test file with set of numbers.
+
+Please, when you push data at remote repositary,
+make your own folder named by your last name.
