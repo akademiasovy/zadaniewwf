@@ -1,0 +1,32 @@
+Your task: 
+
+Create an application that opens a file "numbers.txt", reads the content of the file (int numbers) and:
+
+a) creates a file "sortedNumbers.txt" that contains all numbers from input file sorted ascending
+
+b) creates a file "evenNumbers.txt" that contains all even numbers from input file
+
+c) creates a file "primeNumbers" that contains all primenumbers from input file
+
+d) creates a file "mostPopulousNumber.txt" that contains one or more numbers which occurs most often in the input file
+
+e) create file "statistics.txt" that presents:
+   number of negative numbers
+   number of 4-digit numbers
+   number of 5-digit numbers
+   number of numbers where digit sum is 20
+   min value
+      
+
+Other requirements:
+- make a folder named by your last name in repository "zadaniewwf"
+
+- no slovak word in your application (output, variables, text)
+
+- comment key rows in your project
+
+- create a comment at the beginning of the file (*.c), that contains: author, date, description
+
+- create a comment before every function: name, author, date, description, input, output
+
+Deadline: sunday, 13/nov/2016 23:59
