@@ -1,0 +1,9 @@
+
+Count of negative numbers: 144
+
+Count of 4 digit numbers: 583
+
+Count of 5 digit numbers: 476
+
+Count of numbers with digit sum 20: 70
+Minimal value: -8090
