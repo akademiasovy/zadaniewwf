@@ -1,0 +1,5 @@
+number of negative numbers:144
+number of 4-digit numbers:583
+number of 5-digit numbers:476
+number of numbers where digit sum is 20:65
+min value:-8090
