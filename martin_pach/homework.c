@@ -31,6 +31,11 @@ void sortNumbers(FILE *pFr){
     int i = 0, j, temp;
 
     fw = fopen("sortedNumbers.txt", "w");
+    if(fw == NULL){
+        fclose(fw);
+        fclose(pFr);
+        return 1;
+    }
     rewind(pFr);
 
     while((fscanf(pFr, "%d", &array[i])) != EOF){
@@ -61,6 +66,11 @@ void getEvenNumbers(FILE *pFr){
     int num;
 
     fw = fopen("evenNumbers.txt", "w");
+    if(fw == NULL){
+        fclose(fw);
+        fclose(pFr);
+        return 1;
+    }
     rewind(pFr);
 
     while((fscanf(pFr, "%d", &num)) != EOF){
@@ -82,6 +92,11 @@ void getPrimeNumbers(FILE *pFr){
     int i;
 
     fw = fopen("primeNumbers.txt", "w");
+    if(fw == NULL){
+        fclose(fw);
+        fclose(pFr);
+        return 0;
+    }
     rewind(pFr);
     while((fscanf(pFr, "%d", &num)) != EOF){
         if((num == 2 || num == 3) && num>=2){
@@ -119,6 +134,11 @@ void getModus(FILE *pFr){
     FILE *fw;
 
     fw = fopen("mostPopulousNumber.txt", "w");
+    if(fw == NULL){
+        fclose(fw);
+        fclose(pFr);
+        return 1;
+    }
     rewind(pFr);
 
     for(i=0; i<size; i++){
@@ -180,6 +200,11 @@ void getStatistics(FILE *pFr){
     FILE *fw;
 
     fw = fopen("statistics.txt", "w");
+    if(fw == NULL){
+        fclose(fw);
+        fclose(pFr);
+        return 1;
+    }
     rewind(pFr);
 
     while((fscanf(pFr, "%d", &num)) != EOF){
@@ -189,6 +214,8 @@ void getStatistics(FILE *pFr){
         if(num < min){
             min = num;
         }
+
+        num = abs(num);
         while(num != 0){
             sum += num % 10;
             num /= 10;
