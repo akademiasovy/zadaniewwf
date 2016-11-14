@@ -284,8 +284,7 @@ void statistics(){
 					else{
 						a=x;
 					}
-				
-					while(a!=0){
+						while(a!=0){
 						modulo=a%10;
 						sum+=modulo;
 						a=a/10;
