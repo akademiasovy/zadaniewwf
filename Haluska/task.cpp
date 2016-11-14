@@ -106,7 +106,6 @@ void evenN(){
 		
 	fclose(fr);
 	fclose(fw);
-	
 }
 
 /**
