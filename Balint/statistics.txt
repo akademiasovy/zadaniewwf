@@ -1,0 +1,5 @@
+Number of negative numbers: 144
+Number of 4 digit numbers: 582
+Number of 5 digit numbers: 476
+Number of digit summary of 20: 70
+Min value number: -8090
