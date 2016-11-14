@@ -97,7 +97,7 @@ void evenN(){
 		}
 		else{ 
 			while(fscanf(fr,"%d", &x )!=EOF){
-				if(x%2==0){
+				if(x>0 && x%2==0){
 				fprintf(fw,"%d ",x);	
 				}
 			}
@@ -127,23 +127,28 @@ void primeN(){
 		}
 		else{ 
 			while(fscanf(fr,"%d", &x )!=EOF){
-				if(x>2 && x%2==0){
-					continue;
-				}
-				else{
-					for(i=1; i<=x; i++){
-						if(x%i==0){
-							count++;
-							if(count>2){
-								continue;
+				if(x>1){
+					if(x>2 && x%2==0){
+						continue;
+					}
+					else{
+						for(i=1; i<=x; i++){
+							if(x%i==0){
+								count++;
+								if(count>2){
+									continue;
+								}
 							}
 						}
+						if(count<=2){
+							fprintf(fw,"%d ",x);
+						}
 					}
-					if(count<=2){
-						fprintf(fw,"%d ",x);
-					}
+					count=0;
 				}
-				count=0;
+				else{
+					continue;
+				}
 			}
 		}
 	}
@@ -250,7 +255,7 @@ void mostPopulousN(){
 */
 void statistics(){
 	int x;
-	int neg=0, fordigit=0, fivedigit=0,sum=0, digitSum=0, minV=2147483647, modulo;
+	int neg=0, fordigit=0, fivedigit=0,sum=0, digitSum=0, minV=2147483647, modulo, a;
 	FILE *fr, *fw;
 	fr=fopen("numbers.txt", "r");
 	fw=fopen("statistics.txt", "w");
@@ -266,18 +271,24 @@ void statistics(){
 				if(x<0){
 					neg++;
 				}
-				if(x>999 && x<=9999){
+				if((x>999 && x<=9999) || (x>=-9999 && x<-999)){
 					fordigit++;
 				}
-				if(x>9999 && x<=99999){
+				if((x>9999 && x<=99999) || (x>=-99999 && x<-9999)){
 					fivedigit++;
 				}
-				if(x>298){
+				if(x>298 || x<-298){
+					if(x<-298){
+						a=x*(-1);
+					}
+					else{
+						a=x;
+					}
 				
-					while(x!=0){
-						modulo=x%10;
+					while(a!=0){
+						modulo=a%10;
 						sum+=modulo;
-						x=x/10;
+						a=a/10;
 					}
 					if(sum==20){
 						digitSum++;
